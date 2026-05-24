@@ -1,0 +1,44 @@
+.recipeTile {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.recipeTile:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 107, 53, 0.3);
+  box-shadow: var(--shadow-lg), 0 10px 20px rgba(255, 107, 53, 0.05);
+}
+
+.recipeTile__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.recipeTile:hover .recipeTile__img {
+  transform: scale(1.05);
+}
+
+.recipeTile__name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 16px;
+  color: var(--text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.8rem;
+  line-height: 1.4;
+}
+
